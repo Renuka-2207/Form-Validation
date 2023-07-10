@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Validation </title>
+</head>
+<body>
+    <h1> 
+        HTML Form 
+        </h1>
+        <p> 
+        Fill the  following registration form. 
+        </p>
+        <p> <strong> Note: </strong>  * denotes the required fields. </p>
+        <!--Creating a html form-->
+        <form id = "myform" action="/action_file.php" method = "post" target = "_blank" autocomplete = "on">
+        <label for = "firstname"> First Name:* </label>
+        <input id = "firstname" type = "text" name = "firstname" value = "" autocomplete = "given-name" required>
+        <br><br>
+        
+        <label for = "middlename"> Middle Name: </label>
+        <input id = "middlename" type = "text" name = "middlename" value = "" autocomplete = "additional-name">
+        <br><br>
+        
+        <label for = "lastname"> Last Name:* </label>
+        <input id = "lastname" type = "text" name = "lastname" value = "" autocomplete = "family-name" required>
+        <br><br>
+        
+        <label for = "dateofbirth"> Date of Birth:* </label>
+        <input id = "dateofbirth" type = "date" name = "birthdate" autocomplete = "bday" required>
+        <br><br>
+        
+        
+        <fieldset>
+        <legend> Choose your gender:*  </legend>
+        <label for = "male"> Male </label>
+        <input id = "male" type = "radio" name = "gender" value = "Male" required>
+        <br>
+        
+        <label for = "female"> Female </label>
+        <input id = "female" type = "radio" name = "gender" value = "Female">
+        <br>
+        
+        <label for = "others"> Others </label>
+        <input id = "others" type = "radio" name = "gender" value = "Others">
+        <br><br>
+        </fieldset>
+        
+        <!-- Creating a input field for age.  Restricting the age from 18 to 50 using min and max attribute  -->
+        <label for = "age"> Age(in Years):* </label>
+        <input id = "age" type = "number" name = "age" min = "18" max = "50" required>
+        <br><br>
+        
+        <label for = "phone"> Mobile Number:*(Use this pattern 123-4567-890) </label>
+        <input id = "phone" type = "tel" name = "phone" pattern ="[0-9]{3}-[0-9]{4}-[0-9]{3}" autocomplete = "tel" required>
+        <br><br>
+        
+        <label for = "email"> E-mail ID:* </label>
+        <input id = "email" type = "email" name = "email" autocomplete = "email" required>
+      <br><br>
+
+      <!-- Creating a input field for address using textarea -->
+    <label for = "address"> Address: * </label>
+    <textarea id = "address" name = "Address" rows = "6" cols = "6" autocomplete = "address" required></textarea>
+    <br><br>
+
+<!--Creating a button for reset-->
+      <input type = "reset">
+      <br><br>
+
+      <!--Creating a button for submitting the form-->
+      <input type = "submit">  
+</form>
+
+</body>
+</html>
